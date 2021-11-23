@@ -1,0 +1,149 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frm_mainmenu_a189289
+    Inherits System.Windows.Forms.Form
+
+    'Form overrides dispose to clean up the component list.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Required by the Windows Form Designer
+    Private components As System.ComponentModel.IContainer
+
+    'NOTE: The following procedure is required by the Windows Form Designer
+    'It can be modified using the Windows Form Designer.  
+    'Do not modify it using the code editor.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.btn_products = New System.Windows.Forms.Button()
+        Me.btn_orders = New System.Windows.Forms.Button()
+        Me.btn_staffs = New System.Windows.Forms.Button()
+        Me.btn_customers = New System.Windows.Forms.Button()
+        Me.lbl_subtitle = New System.Windows.Forms.Label()
+        Me.lbl_title = New System.Windows.Forms.Label()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'btn_products
+        '
+        Me.btn_products.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btn_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_products.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_products.ForeColor = System.Drawing.Color.White
+        Me.btn_products.Location = New System.Drawing.Point(0, 0)
+        Me.btn_products.Name = "btn_products"
+        Me.btn_products.Size = New System.Drawing.Size(210, 90)
+        Me.btn_products.TabIndex = 0
+        Me.btn_products.Text = "Catalog"
+        Me.btn_products.UseVisualStyleBackColor = False
+        '
+        'btn_orders
+        '
+        Me.btn_orders.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btn_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_orders.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_orders.ForeColor = System.Drawing.Color.White
+        Me.btn_orders.Location = New System.Drawing.Point(0, 87)
+        Me.btn_orders.Name = "btn_orders"
+        Me.btn_orders.Size = New System.Drawing.Size(210, 90)
+        Me.btn_orders.TabIndex = 1
+        Me.btn_orders.Text = "Orders"
+        Me.btn_orders.UseVisualStyleBackColor = False
+        '
+        'btn_staffs
+        '
+        Me.btn_staffs.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btn_staffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_staffs.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_staffs.ForeColor = System.Drawing.Color.White
+        Me.btn_staffs.Location = New System.Drawing.Point(0, 174)
+        Me.btn_staffs.Name = "btn_staffs"
+        Me.btn_staffs.Size = New System.Drawing.Size(210, 90)
+        Me.btn_staffs.TabIndex = 2
+        Me.btn_staffs.Text = "Staffs"
+        Me.btn_staffs.UseVisualStyleBackColor = False
+        '
+        'btn_customers
+        '
+        Me.btn_customers.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.btn_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_customers.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_customers.ForeColor = System.Drawing.Color.White
+        Me.btn_customers.Location = New System.Drawing.Point(0, 260)
+        Me.btn_customers.Name = "btn_customers"
+        Me.btn_customers.Size = New System.Drawing.Size(210, 90)
+        Me.btn_customers.TabIndex = 3
+        Me.btn_customers.Text = "Customers"
+        Me.btn_customers.UseVisualStyleBackColor = False
+        '
+        'lbl_subtitle
+        '
+        Me.lbl_subtitle.AutoSize = True
+        Me.lbl_subtitle.Font = New System.Drawing.Font("Palatino Linotype", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_subtitle.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.lbl_subtitle.Location = New System.Drawing.Point(265, 123)
+        Me.lbl_subtitle.Name = "lbl_subtitle"
+        Me.lbl_subtitle.Size = New System.Drawing.Size(181, 22)
+        Me.lbl_subtitle.TabIndex = 8
+        Me.lbl_subtitle.Text = "For an extraordinary ride"
+        '
+        'lbl_title
+        '
+        Me.lbl_title.AutoSize = True
+        Me.lbl_title.Font = New System.Drawing.Font("Cooper Black", 24.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_title.ForeColor = System.Drawing.Color.RoyalBlue
+        Me.lbl_title.Location = New System.Drawing.Point(263, 87)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(401, 36)
+        Me.lbl_title.TabIndex = 7
+        Me.lbl_title.Text = "Quality tires every time"
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None
+        Me.PictureBox1.Image = Global.prj_sportrimsmarket_a189289.My.Resources.Resources.william_f1
+        Me.PictureBox1.Location = New System.Drawing.Point(417, 113)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(597, 346)
+        Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
+        Me.PictureBox1.TabIndex = 9
+        Me.PictureBox1.TabStop = False
+        '
+        'frm_mainmenu_a189289
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.GhostWhite
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.ClientSize = New System.Drawing.Size(922, 348)
+        Me.Controls.Add(Me.lbl_subtitle)
+        Me.Controls.Add(Me.lbl_title)
+        Me.Controls.Add(Me.btn_customers)
+        Me.Controls.Add(Me.btn_staffs)
+        Me.Controls.Add(Me.btn_orders)
+        Me.Controls.Add(Me.btn_products)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Name = "frm_mainmenu_a189289"
+        Me.Text = "frm_mainmenu_a189289"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents btn_products As Button
+    Friend WithEvents btn_orders As Button
+    Friend WithEvents btn_staffs As Button
+    Friend WithEvents btn_customers As Button
+    Friend WithEvents lbl_subtitle As Label
+    Friend WithEvents lbl_title As Label
+    Friend WithEvents PictureBox1 As PictureBox
+End Class

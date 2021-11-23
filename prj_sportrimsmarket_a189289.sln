@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31605.320
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "prj_sportrimsmarket_a189289", "prj_sportrimsmarket_a189289\prj_sportrimsmarket_a189289.vbproj", "{B3535B07-C273-402B-B5D0-F3C8E5438DCE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B3535B07-C273-402B-B5D0-F3C8E5438DCE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3535B07-C273-402B-B5D0-F3C8E5438DCE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3535B07-C273-402B-B5D0-F3C8E5438DCE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3535B07-C273-402B-B5D0-F3C8E5438DCE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D7B88A33-D10D-4498-8942-8C8731BFC1BD}
+	EndGlobalSection
+EndGlobal
