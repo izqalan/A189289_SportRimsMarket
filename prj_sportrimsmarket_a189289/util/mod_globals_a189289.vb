@@ -2,6 +2,7 @@
     Public myconnection As String = "Provider = Microsoft.ACE.OLEDB.12.0;
 Data Source=DB_SPORTRIMS_MARKET_A189289.accdb;Persist Security Info=False;"
     Public myconnection2 As New OleDb.OleDbConnection(myconnection)
+    Public defaultpicture As String = Application.StartupPath & "\pictures\nophoto.png"
 
     Public Function run_sql_query(mysql As String) As DataTable
 
