@@ -13,7 +13,8 @@
         grd_products.Columns(6).HeaderText = "Size"
 
         txt_id.Enabled = True
-        btn_delete.Enabled = False
+        btn_delete.Visible = False
+        btn_update.Visible = False
 
         cmb_size.DataSource = run_sql_query("SELECT DISTINCT FLD_PRODUCT_SIZE FROM TBL_PRODUCTS_A189289")
         cmb_size.DisplayMember = "FLD_PRODUCT_SIZE"
@@ -55,7 +56,9 @@
 
     Private Sub grd_products_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_products.CellContentClick
         search(grd_products.SelectedCells.Item(0).Value)
-        btn_delete.Enabled = True
+        btn_delete.Visible = True
+        btn_update.Visible = True
+        btn_create.Visible = False
     End Sub
 
     Private Sub resetField()
@@ -69,6 +72,9 @@
         txt_quantity.Text = ""
         txt_rating.Text = ""
         cmb_size.Text = ""
+        btn_delete.Visible = False
+        btn_update.Visible = False
+        btn_create.Visible = True
     End Sub
 
     Private Sub refresh_grid()
