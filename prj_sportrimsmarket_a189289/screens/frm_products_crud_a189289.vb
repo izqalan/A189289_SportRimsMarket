@@ -112,6 +112,9 @@
             mywriter.ExecuteNonQuery()
             mywriter.Connection.Close()
 
+            Beep()
+            MsgBox("You have successfully created the product""" & txt_id.Text & """.")
+
             refresh_grid()
             resetField()
 
@@ -123,7 +126,20 @@
     End Sub
 
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
+        run_sql_command("UPDATE TBL_PRODUCTS_A189289 SET
+                            FLD_PRODUCT_NAME='" & rich_productName.Text & "',
+                            FLD_PRODUCT_PRICE=" & txt_price.Text & ",
+                            FLD_PRODUCT_QUANTITY=" & txt_quantity.Text & ",
+                            FLD_PRODUCT_RATING=" & txt_rating.Text & ",
+                            FLD_PRODUCT_SIZE='" & cmb_size.Text & "',
+                            FLD_PRODUCT_COMPATIBILITY='" & txt_compatibility.Text & "'
+                            WHERE FLD_PRODUCT_ID='" & txt_id.Text & "'")
 
+        Beep()
+        MsgBox("You have successfully updated the product """ & txt_id.Text & """.")
+
+        refresh_grid()
+        resetField()
     End Sub
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click

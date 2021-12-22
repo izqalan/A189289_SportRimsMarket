@@ -20,4 +20,25 @@ Data Source=DB_SPORTRIMS_MARKET_A189289.accdb;Persist Security Info=False;"
         Return mydatatable
 
     End Function
+
+    Public Sub run_sql_command(thissql As String)
+
+        Dim mywriter As New OleDb.OleDbCommand(thissql, myconnection2)
+
+        Try
+
+            mywriter.Connection.Open()
+            mywriter.ExecuteNonQuery()
+            mywriter.Connection.Close()
+
+        Catch ex As Exception
+
+            Beep()
+            MsgBox("There is a mistake in the data you entered, as shown below" & vbCrLf & vbCrLf & ex.Message)
+
+            mywriter.Connection.Close()
+
+        End Try
+
+    End Sub
 End Module
