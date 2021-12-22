@@ -31,6 +31,9 @@ Data Source=DB_SPORTRIMS_MARKET_A189289.accdb;Persist Security Info=False;"
             mywriter.ExecuteNonQuery()
             mywriter.Connection.Close()
 
+            Beep()
+            MsgBox("Operation Successful")
+
         Catch ex As Exception
 
             Beep()

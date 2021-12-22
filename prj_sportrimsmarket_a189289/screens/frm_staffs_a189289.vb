@@ -77,4 +77,16 @@
         resetField()
         LoadList()
     End Sub
+
+    Private Sub btn_create_Click(sender As Object, e As EventArgs) Handles btn_create.Click
+        run_sql_command("INSERT INTO TBL_STAFFS_A189289 
+                (FLD_STAFF_ID, 
+                FLD_STAFF_NAME, 
+                FLD_STAFF_ROLE) VALUES 
+            ('" & txt_id.Text & "',
+            '" & txt_name.Text & "',
+            '" & txt_role.Text & "')")
+        resetField()
+        LoadList()
+    End Sub
 End Class
