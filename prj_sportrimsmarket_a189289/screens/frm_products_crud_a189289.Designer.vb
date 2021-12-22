@@ -134,6 +134,7 @@ Partial Class frm_products_crud_a189289
         'btn_delete
         '
         Me.btn_delete.BackColor = System.Drawing.Color.Red
+        Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_delete.ForeColor = System.Drawing.Color.WhiteSmoke
         Me.btn_delete.Location = New System.Drawing.Point(640, 150)
         Me.btn_delete.Name = "btn_delete"
@@ -247,6 +248,7 @@ Partial Class frm_products_crud_a189289
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(800, 562)
         Me.Controls.Add(Me.lbl_price)
         Me.Controls.Add(Me.lbl_name)

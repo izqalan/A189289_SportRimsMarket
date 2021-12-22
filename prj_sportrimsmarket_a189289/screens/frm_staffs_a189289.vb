@@ -7,6 +7,9 @@
 
         LoadList()
 
+        btn_update.Visible = False
+        btn_delete.Visible = False
+
     End Sub
 
     Private Sub MainToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MainToolStripMenuItem.Click
@@ -48,6 +51,9 @@
 
     Private Sub lst_staffs_MouseClick(sender As Object, e As EventArgs) Handles lst_staffs.MouseClick
         search(lst_staffs.SelectedItems.Item(0).Text)
+        btn_create.Visible = False
+        btn_update.Visible = True
+        btn_delete.Visible = True
     End Sub
 
     Private Sub search(sid As String)
@@ -63,6 +69,9 @@
         txt_name.Text = ""
         txt_role.Text = ""
         txt_id.Enabled = True
+        btn_create.Visible = True
+        btn_update.Visible = False
+        btn_delete.Visible = False
     End Sub
 
     Private Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
@@ -95,4 +104,5 @@
         resetField()
         LoadList()
     End Sub
+
 End Class
