@@ -89,4 +89,10 @@
         resetField()
         LoadList()
     End Sub
+
+    Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
+        run_sql_command("DELETE FROM TBL_STAFFS_A189289 WHERE FLD_STAFF_ID='" & txt_id.Text & "'")
+        resetField()
+        LoadList()
+    End Sub
 End Class
