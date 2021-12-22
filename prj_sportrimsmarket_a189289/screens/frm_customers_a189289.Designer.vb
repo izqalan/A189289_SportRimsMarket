@@ -50,7 +50,7 @@ Partial Class frm_customers_a189289
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.grd_customers.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grd_customers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grd_customers.Size = New System.Drawing.Size(357, 501)
+        Me.grd_customers.Size = New System.Drawing.Size(460, 501)
         Me.grd_customers.TabIndex = 2
         '
         'MenuStrip1

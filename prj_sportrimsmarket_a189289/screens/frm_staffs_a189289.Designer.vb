@@ -29,6 +29,13 @@ Partial Class frm_staffs_a189289
         Me.StaffsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lst_staffs = New System.Windows.Forms.ListView()
+        Me.txt_id = New System.Windows.Forms.TextBox()
+        Me.txt_name = New System.Windows.Forms.TextBox()
+        Me.txt_role = New System.Windows.Forms.TextBox()
+        Me.btn_clear = New System.Windows.Forms.Button()
+        Me.btn_update = New System.Windows.Forms.Button()
+        Me.btn_create = New System.Windows.Forms.Button()
+        Me.btn_delete = New System.Windows.Forms.Button()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -73,12 +80,70 @@ Partial Class frm_staffs_a189289
         '
         'lst_staffs
         '
+        Me.lst_staffs.FullRowSelect = True
         Me.lst_staffs.HideSelection = False
-        Me.lst_staffs.Location = New System.Drawing.Point(12, 105)
+        Me.lst_staffs.Location = New System.Drawing.Point(12, 38)
         Me.lst_staffs.Name = "lst_staffs"
-        Me.lst_staffs.Size = New System.Drawing.Size(776, 333)
+        Me.lst_staffs.Size = New System.Drawing.Size(331, 400)
         Me.lst_staffs.TabIndex = 13
         Me.lst_staffs.UseCompatibleStateImageBehavior = False
+        '
+        'txt_id
+        '
+        Me.txt_id.Location = New System.Drawing.Point(397, 38)
+        Me.txt_id.Name = "txt_id"
+        Me.txt_id.Size = New System.Drawing.Size(100, 20)
+        Me.txt_id.TabIndex = 14
+        '
+        'txt_name
+        '
+        Me.txt_name.Location = New System.Drawing.Point(397, 64)
+        Me.txt_name.Name = "txt_name"
+        Me.txt_name.Size = New System.Drawing.Size(198, 20)
+        Me.txt_name.TabIndex = 15
+        '
+        'txt_role
+        '
+        Me.txt_role.Location = New System.Drawing.Point(397, 90)
+        Me.txt_role.Name = "txt_role"
+        Me.txt_role.Size = New System.Drawing.Size(198, 20)
+        Me.txt_role.TabIndex = 16
+        '
+        'btn_clear
+        '
+        Me.btn_clear.Location = New System.Drawing.Point(397, 154)
+        Me.btn_clear.Name = "btn_clear"
+        Me.btn_clear.Size = New System.Drawing.Size(75, 23)
+        Me.btn_clear.TabIndex = 17
+        Me.btn_clear.Text = "Clear Field"
+        Me.btn_clear.UseVisualStyleBackColor = True
+        '
+        'btn_update
+        '
+        Me.btn_update.Location = New System.Drawing.Point(478, 154)
+        Me.btn_update.Name = "btn_update"
+        Me.btn_update.Size = New System.Drawing.Size(75, 23)
+        Me.btn_update.TabIndex = 18
+        Me.btn_update.Text = "Update"
+        Me.btn_update.UseVisualStyleBackColor = True
+        '
+        'btn_create
+        '
+        Me.btn_create.Location = New System.Drawing.Point(559, 154)
+        Me.btn_create.Name = "btn_create"
+        Me.btn_create.Size = New System.Drawing.Size(75, 23)
+        Me.btn_create.TabIndex = 19
+        Me.btn_create.Text = "Create"
+        Me.btn_create.UseVisualStyleBackColor = True
+        '
+        'btn_delete
+        '
+        Me.btn_delete.Location = New System.Drawing.Point(640, 154)
+        Me.btn_delete.Name = "btn_delete"
+        Me.btn_delete.Size = New System.Drawing.Size(75, 23)
+        Me.btn_delete.TabIndex = 20
+        Me.btn_delete.Text = "Delete"
+        Me.btn_delete.UseVisualStyleBackColor = True
         '
         'frm_staffs_a189289
         '
@@ -86,6 +151,13 @@ Partial Class frm_staffs_a189289
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.btn_delete)
+        Me.Controls.Add(Me.btn_create)
+        Me.Controls.Add(Me.btn_update)
+        Me.Controls.Add(Me.btn_clear)
+        Me.Controls.Add(Me.txt_role)
+        Me.Controls.Add(Me.txt_name)
+        Me.Controls.Add(Me.txt_id)
         Me.Controls.Add(Me.lst_staffs)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "frm_staffs_a189289"
@@ -104,4 +176,11 @@ Partial Class frm_staffs_a189289
     Friend WithEvents StaffsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lst_staffs As ListView
+    Friend WithEvents txt_id As TextBox
+    Friend WithEvents txt_name As TextBox
+    Friend WithEvents txt_role As TextBox
+    Friend WithEvents btn_clear As Button
+    Friend WithEvents btn_update As Button
+    Friend WithEvents btn_create As Button
+    Friend WithEvents btn_delete As Button
 End Class
