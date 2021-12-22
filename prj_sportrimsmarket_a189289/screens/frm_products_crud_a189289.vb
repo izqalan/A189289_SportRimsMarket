@@ -13,6 +13,7 @@
         grd_products.Columns(6).HeaderText = "Size"
 
         txt_id.Enabled = True
+        btn_delete.Enabled = False
 
         cmb_size.DataSource = run_sql_query("SELECT DISTINCT FLD_PRODUCT_SIZE FROM TBL_PRODUCTS_A189289")
         cmb_size.DisplayMember = "FLD_PRODUCT_SIZE"
@@ -54,6 +55,7 @@
 
     Private Sub grd_products_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles grd_products.CellContentClick
         search(grd_products.SelectedCells.Item(0).Value)
+        btn_delete.Enabled = True
     End Sub
 
     Private Sub resetField()
@@ -143,7 +145,11 @@
     End Sub
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
-
+        run_sql_command("DELETE FROM TBL_PRODUCTS_A189289 WHERE FLD_PRODUCT_ID='" & txt_id.Text & "'")
+        Beep()
+        MsgBox("The course """ & txt_id.Text & """ has been successfully deleted.")
+        refresh_grid()
+        resetField()
     End Sub
 
     Private Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
