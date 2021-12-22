@@ -1,9 +1,12 @@
 ﻿Public Class frm_staffs_a189289
     Private Sub frm_staffs_a189289_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        lst_staffs.Columns.Add(0).Text = "Staff ID"
+        lst_staffs.Columns.Add(1).Text = "Staff Name"
+        lst_staffs.Columns.Add(2).Text = "Staff Role"
+
         LoadList()
-        lst_staffs.Columns(0).Text = "Staff ID"
-        lst_staffs.Columns(1).Text = "Staff Name"
-        lst_staffs.Columns(2).Text = "Staff Role"
+
     End Sub
 
     Private Sub MainToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles MainToolStripMenuItem.Click
@@ -33,10 +36,9 @@
     Private Sub LoadList()
         Dim dtable As DataTable
         dtable = run_sql_query("SELECT * FROM TBL_STAFFS_A189289")
+
         lst_staffs.Items.Clear()
         lst_staffs.View = View.Details
-
-        lst_staffs.Columns.AddRange(Array.ConvertAll(dtable.Columns.Cast(Of DataColumn).ToArray, Function(dr) New ColumnHeader With {.Name = dr.Caption, .Text = dr.Caption}).ToArray)
 
         For Each row As DataRow In dtable.Rows
             lst_staffs.Items.Add(New ListViewItem(Array.ConvertAll(row.ItemArray, Function(o) o.ToString)))
@@ -53,12 +55,14 @@
         txt_id.Text = searchItem.Rows(0).Item("FLD_STAFF_ID")
         txt_name.Text = searchItem.Rows(0).Item("FLD_STAFF_NAME")
         txt_role.Text = searchItem.Rows(0).Item("FLD_STAFF_ROLE")
+        txt_id.Enabled = False
     End Sub
 
     Private Sub resetField()
         txt_id.Text = ""
         txt_name.Text = ""
         txt_role.Text = ""
+        txt_id.Enabled = True
     End Sub
 
     Private Sub btn_clear_Click(sender As Object, e As EventArgs) Handles btn_clear.Click
@@ -66,6 +70,11 @@
     End Sub
 
     Private Sub btn_update_Click(sender As Object, e As EventArgs) Handles btn_update.Click
-
+        run_sql_command("UPDATE TBL_STAFFS_A189289 SET
+                            FLD_STAFF_NAME='" & txt_name.Text & "',
+                            FLD_STAFF_ROLE='" & txt_role.Text & "'
+                            WHERE FLD_STAFF_ID='" & txt_id.Text & "'")
+        resetField()
+        LoadList()
     End Sub
 End Class
