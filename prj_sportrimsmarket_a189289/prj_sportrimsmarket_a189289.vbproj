@@ -79,6 +79,12 @@
     <Compile Include="frm_mainmenu_a189289.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screens\frm_customers_crud_a189289.Designer.vb">
+      <DependentUpon>frm_customers_crud_a189289.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frm_customers_crud_a189289.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screens\frm_products_crud_a189289.Designer.vb">
       <DependentUpon>frm_products_crud_a189289.vb</DependentUpon>
     </Compile>
@@ -125,6 +131,12 @@
     <Compile Include="screens\frm_staffs_a189289.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screens\frm_staffs_crud_a189289.Designer.vb">
+      <DependentUpon>frm_staffs_crud_a189289.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frm_staffs_crud_a189289.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="util\mod_globals_a189289.vb" />
   </ItemGroup>
   <ItemGroup>
@@ -140,6 +152,9 @@
     <EmbeddedResource Include="screens\frm_customers_a189289.resx">
       <DependentUpon>frm_customers_a189289.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="screens\frm_customers_crud_a189289.resx">
+      <DependentUpon>frm_customers_crud_a189289.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screens\frm_orders_a189289.resx">
       <DependentUpon>frm_orders_a189289.vb</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="screens\frm_staffs_a189289.resx">
       <DependentUpon>frm_staffs_a189289.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="screens\frm_staffs_crud_a189289.resx">
+      <DependentUpon>frm_staffs_crud_a189289.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

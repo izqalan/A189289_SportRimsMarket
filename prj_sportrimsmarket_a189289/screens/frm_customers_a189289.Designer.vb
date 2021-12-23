@@ -43,14 +43,14 @@ Partial Class frm_customers_a189289
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.grd_customers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCells
         Me.grd_customers.GridColor = System.Drawing.SystemColors.ControlLightLight
-        Me.grd_customers.Location = New System.Drawing.Point(12, 44)
+        Me.grd_customers.Location = New System.Drawing.Point(12, 116)
         Me.grd_customers.MultiSelect = False
         Me.grd_customers.Name = "grd_customers"
         Me.grd_customers.ReadOnly = True
         DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
         Me.grd_customers.RowsDefaultCellStyle = DataGridViewCellStyle1
         Me.grd_customers.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.grd_customers.Size = New System.Drawing.Size(460, 501)
+        Me.grd_customers.Size = New System.Drawing.Size(1041, 410)
         Me.grd_customers.TabIndex = 2
         '
         'MenuStrip1
