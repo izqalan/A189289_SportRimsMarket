@@ -85,9 +85,9 @@ Partial Class frm_staffs_a189289
         '
         Me.lst_staffs.FullRowSelect = True
         Me.lst_staffs.HideSelection = False
-        Me.lst_staffs.Location = New System.Drawing.Point(12, 38)
+        Me.lst_staffs.Location = New System.Drawing.Point(12, 98)
         Me.lst_staffs.Name = "lst_staffs"
-        Me.lst_staffs.Size = New System.Drawing.Size(331, 400)
+        Me.lst_staffs.Size = New System.Drawing.Size(331, 340)
         Me.lst_staffs.TabIndex = 13
         Me.lst_staffs.UseCompatibleStateImageBehavior = False
         '
@@ -177,9 +177,9 @@ Partial Class frm_staffs_a189289
         Me.lbl_role.ForeColor = System.Drawing.SystemColors.ButtonHighlight
         Me.lbl_role.Location = New System.Drawing.Point(425, 101)
         Me.lbl_role.Name = "lbl_role"
-        Me.lbl_role.Size = New System.Drawing.Size(29, 13)
+        Me.lbl_role.Size = New System.Drawing.Size(12, 13)
         Me.lbl_role.TabIndex = 23
-        Me.lbl_role.Text = "Role"
+        Me.lbl_role.Text = "s"
         '
         'frm_staffs_a189289
         '
@@ -200,7 +200,7 @@ Partial Class frm_staffs_a189289
         Me.Controls.Add(Me.lst_staffs)
         Me.Controls.Add(Me.MenuStrip1)
         Me.Name = "frm_staffs_a189289"
-        Me.Text = "s"
+        Me.Text = "Staff"
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)

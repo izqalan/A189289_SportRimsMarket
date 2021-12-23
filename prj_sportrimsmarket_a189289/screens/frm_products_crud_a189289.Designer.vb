@@ -23,7 +23,6 @@ Partial Class frm_products_crud_a189289
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.grd_products = New System.Windows.Forms.DataGridView()
-        Me.pic_product = New System.Windows.Forms.PictureBox()
         Me.txt_id = New System.Windows.Forms.TextBox()
         Me.rich_productName = New System.Windows.Forms.RichTextBox()
         Me.txt_price = New System.Windows.Forms.TextBox()
@@ -45,8 +44,17 @@ Partial Class frm_products_crud_a189289
         Me.lbl_id = New System.Windows.Forms.Label()
         Me.lbl_name = New System.Windows.Forms.Label()
         Me.lbl_price = New System.Windows.Forms.Label()
+        Me.pic_product = New System.Windows.Forms.PictureBox()
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.MainToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProductsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StaffsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl_title = New System.Windows.Forms.Label()
         CType(Me.grd_products, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_product, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
         'grd_products
@@ -62,25 +70,16 @@ Partial Class frm_products_crud_a189289
         Me.grd_products.Size = New System.Drawing.Size(672, 255)
         Me.grd_products.TabIndex = 0
         '
-        'pic_product
-        '
-        Me.pic_product.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
-        Me.pic_product.Location = New System.Drawing.Point(43, 27)
-        Me.pic_product.Name = "pic_product"
-        Me.pic_product.Size = New System.Drawing.Size(157, 132)
-        Me.pic_product.TabIndex = 1
-        Me.pic_product.TabStop = False
-        '
         'txt_id
         '
-        Me.txt_id.Location = New System.Drawing.Point(271, 27)
+        Me.txt_id.Location = New System.Drawing.Point(272, 70)
         Me.txt_id.Name = "txt_id"
         Me.txt_id.Size = New System.Drawing.Size(126, 20)
         Me.txt_id.TabIndex = 2
         '
         'rich_productName
         '
-        Me.rich_productName.Location = New System.Drawing.Point(271, 63)
+        Me.rich_productName.Location = New System.Drawing.Point(272, 106)
         Me.rich_productName.Name = "rich_productName"
         Me.rich_productName.Size = New System.Drawing.Size(261, 96)
         Me.rich_productName.TabIndex = 3
@@ -88,21 +87,21 @@ Partial Class frm_products_crud_a189289
         '
         'txt_price
         '
-        Me.txt_price.Location = New System.Drawing.Point(271, 165)
+        Me.txt_price.Location = New System.Drawing.Point(272, 208)
         Me.txt_price.Name = "txt_price"
         Me.txt_price.Size = New System.Drawing.Size(126, 20)
         Me.txt_price.TabIndex = 4
         '
         'txt_picture
         '
-        Me.txt_picture.Location = New System.Drawing.Point(43, 165)
+        Me.txt_picture.Location = New System.Drawing.Point(44, 208)
         Me.txt_picture.Name = "txt_picture"
         Me.txt_picture.Size = New System.Drawing.Size(157, 20)
         Me.txt_picture.TabIndex = 5
         '
         'btn_selectPicture
         '
-        Me.btn_selectPicture.Location = New System.Drawing.Point(43, 191)
+        Me.btn_selectPicture.Location = New System.Drawing.Point(44, 234)
         Me.btn_selectPicture.Name = "btn_selectPicture"
         Me.btn_selectPicture.Size = New System.Drawing.Size(157, 23)
         Me.btn_selectPicture.TabIndex = 6
@@ -115,7 +114,7 @@ Partial Class frm_products_crud_a189289
         '
         'btn_create
         '
-        Me.btn_create.Location = New System.Drawing.Point(640, 92)
+        Me.btn_create.Location = New System.Drawing.Point(641, 135)
         Me.btn_create.Name = "btn_create"
         Me.btn_create.Size = New System.Drawing.Size(75, 23)
         Me.btn_create.TabIndex = 7
@@ -124,7 +123,7 @@ Partial Class frm_products_crud_a189289
         '
         'btn_update
         '
-        Me.btn_update.Location = New System.Drawing.Point(640, 121)
+        Me.btn_update.Location = New System.Drawing.Point(641, 164)
         Me.btn_update.Name = "btn_update"
         Me.btn_update.Size = New System.Drawing.Size(75, 23)
         Me.btn_update.TabIndex = 8
@@ -136,7 +135,7 @@ Partial Class frm_products_crud_a189289
         Me.btn_delete.BackColor = System.Drawing.Color.Red
         Me.btn_delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_delete.ForeColor = System.Drawing.Color.WhiteSmoke
-        Me.btn_delete.Location = New System.Drawing.Point(640, 150)
+        Me.btn_delete.Location = New System.Drawing.Point(641, 193)
         Me.btn_delete.Name = "btn_delete"
         Me.btn_delete.Size = New System.Drawing.Size(75, 23)
         Me.btn_delete.TabIndex = 9
@@ -145,7 +144,7 @@ Partial Class frm_products_crud_a189289
         '
         'btn_clear
         '
-        Me.btn_clear.Location = New System.Drawing.Point(640, 63)
+        Me.btn_clear.Location = New System.Drawing.Point(641, 106)
         Me.btn_clear.Name = "btn_clear"
         Me.btn_clear.Size = New System.Drawing.Size(75, 23)
         Me.btn_clear.TabIndex = 10
@@ -154,7 +153,7 @@ Partial Class frm_products_crud_a189289
         '
         'txt_rating
         '
-        Me.txt_rating.Location = New System.Drawing.Point(271, 194)
+        Me.txt_rating.Location = New System.Drawing.Point(272, 237)
         Me.txt_rating.Name = "txt_rating"
         Me.txt_rating.Size = New System.Drawing.Size(83, 20)
         Me.txt_rating.TabIndex = 11
@@ -162,7 +161,7 @@ Partial Class frm_products_crud_a189289
         'lbl_rating
         '
         Me.lbl_rating.AutoSize = True
-        Me.lbl_rating.Location = New System.Drawing.Point(227, 197)
+        Me.lbl_rating.Location = New System.Drawing.Point(228, 240)
         Me.lbl_rating.Name = "lbl_rating"
         Me.lbl_rating.Size = New System.Drawing.Size(38, 13)
         Me.lbl_rating.TabIndex = 12
@@ -171,7 +170,7 @@ Partial Class frm_products_crud_a189289
         'lbl_quantity
         '
         Me.lbl_quantity.AutoSize = True
-        Me.lbl_quantity.Location = New System.Drawing.Point(219, 223)
+        Me.lbl_quantity.Location = New System.Drawing.Point(220, 266)
         Me.lbl_quantity.Name = "lbl_quantity"
         Me.lbl_quantity.Size = New System.Drawing.Size(46, 13)
         Me.lbl_quantity.TabIndex = 14
@@ -179,7 +178,7 @@ Partial Class frm_products_crud_a189289
         '
         'txt_quantity
         '
-        Me.txt_quantity.Location = New System.Drawing.Point(271, 220)
+        Me.txt_quantity.Location = New System.Drawing.Point(272, 263)
         Me.txt_quantity.Name = "txt_quantity"
         Me.txt_quantity.Size = New System.Drawing.Size(83, 20)
         Me.txt_quantity.TabIndex = 13
@@ -187,7 +186,7 @@ Partial Class frm_products_crud_a189289
         'lbl_compatibility
         '
         Me.lbl_compatibility.AutoSize = True
-        Me.lbl_compatibility.Location = New System.Drawing.Point(365, 197)
+        Me.lbl_compatibility.Location = New System.Drawing.Point(366, 240)
         Me.lbl_compatibility.Name = "lbl_compatibility"
         Me.lbl_compatibility.Size = New System.Drawing.Size(65, 13)
         Me.lbl_compatibility.TabIndex = 16
@@ -195,7 +194,7 @@ Partial Class frm_products_crud_a189289
         '
         'txt_compatibility
         '
-        Me.txt_compatibility.Location = New System.Drawing.Point(436, 194)
+        Me.txt_compatibility.Location = New System.Drawing.Point(437, 237)
         Me.txt_compatibility.Name = "txt_compatibility"
         Me.txt_compatibility.Size = New System.Drawing.Size(137, 20)
         Me.txt_compatibility.TabIndex = 15
@@ -203,7 +202,7 @@ Partial Class frm_products_crud_a189289
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(403, 223)
+        Me.Label3.Location = New System.Drawing.Point(404, 266)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(27, 13)
         Me.Label3.TabIndex = 17
@@ -212,7 +211,7 @@ Partial Class frm_products_crud_a189289
         'cmb_size
         '
         Me.cmb_size.FormattingEnabled = True
-        Me.cmb_size.Location = New System.Drawing.Point(436, 220)
+        Me.cmb_size.Location = New System.Drawing.Point(437, 263)
         Me.cmb_size.Name = "cmb_size"
         Me.cmb_size.Size = New System.Drawing.Size(137, 21)
         Me.cmb_size.TabIndex = 18
@@ -220,7 +219,7 @@ Partial Class frm_products_crud_a189289
         'lbl_id
         '
         Me.lbl_id.AutoSize = True
-        Me.lbl_id.Location = New System.Drawing.Point(207, 30)
+        Me.lbl_id.Location = New System.Drawing.Point(208, 73)
         Me.lbl_id.Name = "lbl_id"
         Me.lbl_id.Size = New System.Drawing.Size(58, 13)
         Me.lbl_id.TabIndex = 19
@@ -229,7 +228,7 @@ Partial Class frm_products_crud_a189289
         'lbl_name
         '
         Me.lbl_name.AutoSize = True
-        Me.lbl_name.Location = New System.Drawing.Point(230, 63)
+        Me.lbl_name.Location = New System.Drawing.Point(231, 106)
         Me.lbl_name.Name = "lbl_name"
         Me.lbl_name.Size = New System.Drawing.Size(35, 13)
         Me.lbl_name.TabIndex = 20
@@ -238,11 +237,70 @@ Partial Class frm_products_crud_a189289
         'lbl_price
         '
         Me.lbl_price.AutoSize = True
-        Me.lbl_price.Location = New System.Drawing.Point(234, 168)
+        Me.lbl_price.Location = New System.Drawing.Point(235, 211)
         Me.lbl_price.Name = "lbl_price"
         Me.lbl_price.Size = New System.Drawing.Size(31, 13)
         Me.lbl_price.TabIndex = 21
         Me.lbl_price.Text = "Price"
+        '
+        'pic_product
+        '
+        Me.pic_product.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
+        Me.pic_product.Location = New System.Drawing.Point(44, 70)
+        Me.pic_product.Name = "pic_product"
+        Me.pic_product.Size = New System.Drawing.Size(157, 132)
+        Me.pic_product.TabIndex = 1
+        Me.pic_product.TabStop = False
+        '
+        'MenuStrip1
+        '
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MainToolStripMenuItem, Me.ProductsToolStripMenuItem, Me.OrdersToolStripMenuItem, Me.StaffsToolStripMenuItem, Me.CustomersToolStripMenuItem})
+        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
+        Me.MenuStrip1.Name = "MenuStrip1"
+        Me.MenuStrip1.Size = New System.Drawing.Size(800, 24)
+        Me.MenuStrip1.TabIndex = 25
+        Me.MenuStrip1.Text = "MenuStrip1"
+        '
+        'MainToolStripMenuItem
+        '
+        Me.MainToolStripMenuItem.Name = "MainToolStripMenuItem"
+        Me.MainToolStripMenuItem.Size = New System.Drawing.Size(46, 20)
+        Me.MainToolStripMenuItem.Text = "Main"
+        '
+        'ProductsToolStripMenuItem
+        '
+        Me.ProductsToolStripMenuItem.Name = "ProductsToolStripMenuItem"
+        Me.ProductsToolStripMenuItem.Size = New System.Drawing.Size(66, 20)
+        Me.ProductsToolStripMenuItem.Text = "Products"
+        '
+        'OrdersToolStripMenuItem
+        '
+        Me.OrdersToolStripMenuItem.Name = "OrdersToolStripMenuItem"
+        Me.OrdersToolStripMenuItem.Size = New System.Drawing.Size(54, 20)
+        Me.OrdersToolStripMenuItem.Text = "Orders"
+        '
+        'StaffsToolStripMenuItem
+        '
+        Me.StaffsToolStripMenuItem.Name = "StaffsToolStripMenuItem"
+        Me.StaffsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.StaffsToolStripMenuItem.Text = "Staffs"
+        '
+        'CustomersToolStripMenuItem
+        '
+        Me.CustomersToolStripMenuItem.Name = "CustomersToolStripMenuItem"
+        Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
+        Me.CustomersToolStripMenuItem.Text = "Customers"
+        '
+        'lbl_title
+        '
+        Me.lbl_title.AutoSize = True
+        Me.lbl_title.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_title.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.lbl_title.Location = New System.Drawing.Point(38, 34)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(275, 33)
+        Me.lbl_title.TabIndex = 37
+        Me.lbl_title.Text = "Update Product Table"
         '
         'frm_products_crud_a189289
         '
@@ -250,6 +308,8 @@ Partial Class frm_products_crud_a189289
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(800, 562)
+        Me.Controls.Add(Me.lbl_title)
+        Me.Controls.Add(Me.MenuStrip1)
         Me.Controls.Add(Me.lbl_price)
         Me.Controls.Add(Me.lbl_name)
         Me.Controls.Add(Me.lbl_id)
@@ -276,6 +336,8 @@ Partial Class frm_products_crud_a189289
         Me.Text = "frm_products_crud_a189289"
         CType(Me.grd_products, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.pic_product, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.MenuStrip1.ResumeLayout(False)
+        Me.MenuStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -304,4 +366,11 @@ Partial Class frm_products_crud_a189289
     Friend WithEvents lbl_id As Label
     Friend WithEvents lbl_name As Label
     Friend WithEvents lbl_price As Label
+    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents MainToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ProductsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents StaffsToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents CustomersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lbl_title As Label
 End Class

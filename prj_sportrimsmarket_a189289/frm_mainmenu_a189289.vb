@@ -22,9 +22,23 @@
         Me.Hide()
     End Sub
 
-    Private Sub btn_staffs_Click(sender As Object, e As EventArgs) Handles btn_staffs.Click
+    Private Sub btn_staffs_Click(sender As Object, e As EventArgs) Handles c.Click
         frm_staffs_a189289.Show()
         Me.Hide()
     End Sub
 
+    Private Sub btn_update_products_Click(sender As Object, e As EventArgs) Handles btn_update_products.Click
+        frm_products_crud_a189289.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btn_update_staffs_Click(sender As Object, e As EventArgs) Handles btn_update_staffs.Click
+        frm_staffs_crud_a189289.Show()
+        Me.Hide()
+    End Sub
+
+    Private Sub btn_update_customers_Click(sender As Object, e As EventArgs) Handles btn_update_customers.Click
+        frm_customers_crud_a189289.Show()
+        Me.Hide()
+    End Sub
 End Class

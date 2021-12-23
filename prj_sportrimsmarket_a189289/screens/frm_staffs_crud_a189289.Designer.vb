@@ -39,6 +39,7 @@ Partial Class frm_staffs_crud_a189289
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lbl_role = New System.Windows.Forms.Label()
         Me.txt_role = New System.Windows.Forms.TextBox()
+        Me.lbl_title = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,9 +120,9 @@ Partial Class frm_staffs_crud_a189289
         '
         Me.lst_staffs.FullRowSelect = True
         Me.lst_staffs.HideSelection = False
-        Me.lst_staffs.Location = New System.Drawing.Point(12, 44)
+        Me.lst_staffs.Location = New System.Drawing.Point(12, 94)
         Me.lst_staffs.Name = "lst_staffs"
-        Me.lst_staffs.Size = New System.Drawing.Size(331, 400)
+        Me.lst_staffs.Size = New System.Drawing.Size(331, 350)
         Me.lst_staffs.TabIndex = 25
         Me.lst_staffs.UseCompatibleStateImageBehavior = False
         '
@@ -181,12 +182,24 @@ Partial Class frm_staffs_crud_a189289
         Me.txt_role.Size = New System.Drawing.Size(198, 20)
         Me.txt_role.TabIndex = 28
         '
+        'lbl_title
+        '
+        Me.lbl_title.AutoSize = True
+        Me.lbl_title.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_title.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.lbl_title.Location = New System.Drawing.Point(12, 52)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(240, 33)
+        Me.lbl_title.TabIndex = 36
+        Me.lbl_title.Text = "Update Staff Table"
+        '
         'frm_staffs_crud_a189289
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.lbl_role)
         Me.Controls.Add(Me.lbl_name)
         Me.Controls.Add(Me.lbl_id)
@@ -224,4 +237,5 @@ Partial Class frm_staffs_crud_a189289
     Friend WithEvents CustomersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lbl_role As Label
     Friend WithEvents txt_role As TextBox
+    Friend WithEvents lbl_title As Label
 End Class

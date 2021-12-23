@@ -37,6 +37,7 @@ Partial Class frm_customers_crud_a189289
         Me.OrdersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.StaffsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomersToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.lbl_title = New System.Windows.Forms.Label()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -117,9 +118,9 @@ Partial Class frm_customers_crud_a189289
         '
         Me.lst_customers.FullRowSelect = True
         Me.lst_customers.HideSelection = False
-        Me.lst_customers.Location = New System.Drawing.Point(12, 44)
+        Me.lst_customers.Location = New System.Drawing.Point(12, 96)
         Me.lst_customers.Name = "lst_customers"
-        Me.lst_customers.Size = New System.Drawing.Size(331, 400)
+        Me.lst_customers.Size = New System.Drawing.Size(331, 348)
         Me.lst_customers.TabIndex = 25
         Me.lst_customers.UseCompatibleStateImageBehavior = False
         '
@@ -162,12 +163,24 @@ Partial Class frm_customers_crud_a189289
         Me.CustomersToolStripMenuItem.Size = New System.Drawing.Size(76, 20)
         Me.CustomersToolStripMenuItem.Text = "Customers"
         '
+        'lbl_title
+        '
+        Me.lbl_title.AutoSize = True
+        Me.lbl_title.Font = New System.Drawing.Font("Roboto", 20.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lbl_title.ForeColor = System.Drawing.Color.MidnightBlue
+        Me.lbl_title.Location = New System.Drawing.Point(12, 52)
+        Me.lbl_title.Name = "lbl_title"
+        Me.lbl_title.Size = New System.Drawing.Size(299, 33)
+        Me.lbl_title.TabIndex = 37
+        Me.lbl_title.Text = "Update Customer Table"
+        '
         'frm_customers_crud_a189289
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.lbl_name)
         Me.Controls.Add(Me.lbl_id)
         Me.Controls.Add(Me.btn_delete)
@@ -201,4 +214,5 @@ Partial Class frm_customers_crud_a189289
     Friend WithEvents OrdersToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents StaffsToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents CustomersToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents lbl_title As Label
 End Class

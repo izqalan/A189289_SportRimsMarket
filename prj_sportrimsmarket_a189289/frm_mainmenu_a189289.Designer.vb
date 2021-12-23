@@ -24,11 +24,14 @@ Partial Class frm_mainmenu_a189289
     Private Sub InitializeComponent()
         Me.btn_products = New System.Windows.Forms.Button()
         Me.btn_orders = New System.Windows.Forms.Button()
-        Me.btn_staffs = New System.Windows.Forms.Button()
+        Me.c = New System.Windows.Forms.Button()
         Me.btn_customers = New System.Windows.Forms.Button()
         Me.lbl_subtitle = New System.Windows.Forms.Label()
         Me.lbl_title = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btn_update_products = New System.Windows.Forms.Button()
+        Me.btn_update_staffs = New System.Windows.Forms.Button()
+        Me.btn_update_customers = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -40,7 +43,7 @@ Partial Class frm_mainmenu_a189289
         Me.btn_products.ForeColor = System.Drawing.Color.White
         Me.btn_products.Location = New System.Drawing.Point(0, 0)
         Me.btn_products.Name = "btn_products"
-        Me.btn_products.Size = New System.Drawing.Size(210, 90)
+        Me.btn_products.Size = New System.Drawing.Size(145, 61)
         Me.btn_products.TabIndex = 0
         Me.btn_products.Text = "Catalog"
         Me.btn_products.UseVisualStyleBackColor = False
@@ -51,25 +54,25 @@ Partial Class frm_mainmenu_a189289
         Me.btn_orders.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_orders.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_orders.ForeColor = System.Drawing.Color.White
-        Me.btn_orders.Location = New System.Drawing.Point(0, 87)
+        Me.btn_orders.Location = New System.Drawing.Point(0, 94)
         Me.btn_orders.Name = "btn_orders"
-        Me.btn_orders.Size = New System.Drawing.Size(210, 90)
+        Me.btn_orders.Size = New System.Drawing.Size(145, 58)
         Me.btn_orders.TabIndex = 1
         Me.btn_orders.Text = "Orders"
         Me.btn_orders.UseVisualStyleBackColor = False
         '
-        'btn_staffs
+        'c
         '
-        Me.btn_staffs.BackColor = System.Drawing.Color.DarkSlateBlue
-        Me.btn_staffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
-        Me.btn_staffs.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_staffs.ForeColor = System.Drawing.Color.White
-        Me.btn_staffs.Location = New System.Drawing.Point(0, 174)
-        Me.btn_staffs.Name = "btn_staffs"
-        Me.btn_staffs.Size = New System.Drawing.Size(210, 90)
-        Me.btn_staffs.TabIndex = 2
-        Me.btn_staffs.Text = "Staffs"
-        Me.btn_staffs.UseVisualStyleBackColor = False
+        Me.c.BackColor = System.Drawing.Color.DarkSlateBlue
+        Me.c.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.c.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.c.ForeColor = System.Drawing.Color.White
+        Me.c.Location = New System.Drawing.Point(0, 148)
+        Me.c.Name = "c"
+        Me.c.Size = New System.Drawing.Size(145, 55)
+        Me.c.TabIndex = 2
+        Me.c.Text = "Staffs"
+        Me.c.UseVisualStyleBackColor = False
         '
         'btn_customers
         '
@@ -77,9 +80,9 @@ Partial Class frm_mainmenu_a189289
         Me.btn_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
         Me.btn_customers.Font = New System.Drawing.Font("Roboto Black", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.btn_customers.ForeColor = System.Drawing.Color.White
-        Me.btn_customers.Location = New System.Drawing.Point(0, 260)
+        Me.btn_customers.Location = New System.Drawing.Point(0, 241)
         Me.btn_customers.Name = "btn_customers"
-        Me.btn_customers.Size = New System.Drawing.Size(210, 90)
+        Me.btn_customers.Size = New System.Drawing.Size(145, 57)
         Me.btn_customers.TabIndex = 3
         Me.btn_customers.Text = "Customers"
         Me.btn_customers.UseVisualStyleBackColor = False
@@ -117,6 +120,45 @@ Partial Class frm_mainmenu_a189289
         Me.PictureBox1.TabIndex = 9
         Me.PictureBox1.TabStop = False
         '
+        'btn_update_products
+        '
+        Me.btn_update_products.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btn_update_products.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_update_products.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_update_products.ForeColor = System.Drawing.Color.White
+        Me.btn_update_products.Location = New System.Drawing.Point(0, 58)
+        Me.btn_update_products.Name = "btn_update_products"
+        Me.btn_update_products.Size = New System.Drawing.Size(145, 44)
+        Me.btn_update_products.TabIndex = 10
+        Me.btn_update_products.Text = "Update Catalog"
+        Me.btn_update_products.UseVisualStyleBackColor = False
+        '
+        'btn_update_staffs
+        '
+        Me.btn_update_staffs.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btn_update_staffs.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_update_staffs.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_update_staffs.ForeColor = System.Drawing.Color.White
+        Me.btn_update_staffs.Location = New System.Drawing.Point(0, 199)
+        Me.btn_update_staffs.Name = "btn_update_staffs"
+        Me.btn_update_staffs.Size = New System.Drawing.Size(145, 44)
+        Me.btn_update_staffs.TabIndex = 11
+        Me.btn_update_staffs.Text = "Update Staffs"
+        Me.btn_update_staffs.UseVisualStyleBackColor = False
+        '
+        'btn_update_customers
+        '
+        Me.btn_update_customers.BackColor = System.Drawing.Color.MidnightBlue
+        Me.btn_update_customers.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.btn_update_customers.Font = New System.Drawing.Font("Roboto", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btn_update_customers.ForeColor = System.Drawing.Color.White
+        Me.btn_update_customers.Location = New System.Drawing.Point(0, 292)
+        Me.btn_update_customers.Name = "btn_update_customers"
+        Me.btn_update_customers.Size = New System.Drawing.Size(145, 44)
+        Me.btn_update_customers.TabIndex = 12
+        Me.btn_update_customers.Text = "Update Customers"
+        Me.btn_update_customers.UseVisualStyleBackColor = False
+        '
         'frm_mainmenu_a189289
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -124,10 +166,13 @@ Partial Class frm_mainmenu_a189289
         Me.BackColor = System.Drawing.Color.GhostWhite
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom
         Me.ClientSize = New System.Drawing.Size(922, 348)
+        Me.Controls.Add(Me.btn_update_customers)
+        Me.Controls.Add(Me.btn_update_staffs)
+        Me.Controls.Add(Me.btn_update_products)
         Me.Controls.Add(Me.lbl_subtitle)
         Me.Controls.Add(Me.lbl_title)
         Me.Controls.Add(Me.btn_customers)
-        Me.Controls.Add(Me.btn_staffs)
+        Me.Controls.Add(Me.c)
         Me.Controls.Add(Me.btn_orders)
         Me.Controls.Add(Me.btn_products)
         Me.Controls.Add(Me.PictureBox1)
@@ -141,9 +186,12 @@ Partial Class frm_mainmenu_a189289
 
     Friend WithEvents btn_products As Button
     Friend WithEvents btn_orders As Button
-    Friend WithEvents btn_staffs As Button
+    Friend WithEvents c As Button
     Friend WithEvents btn_customers As Button
     Friend WithEvents lbl_subtitle As Label
     Friend WithEvents lbl_title As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btn_update_products As Button
+    Friend WithEvents btn_update_staffs As Button
+    Friend WithEvents btn_update_customers As Button
 End Class
