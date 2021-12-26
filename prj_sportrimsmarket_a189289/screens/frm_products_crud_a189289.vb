@@ -1,4 +1,6 @@
-﻿Public Class frm_products_crud_a189289
+﻿Imports System.IO
+
+Public Class frm_products_crud_a189289
     Private Sub frm_products_crud_a189289_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         grd_products.DataSource = run_sql_query("SELECT * FROM TBL_PRODUCTS_A189289")
         txt_picture.Text = defaultpicture
@@ -112,10 +114,11 @@
             '" & cmb_size.Text & "',
             '" & txt_compatibility.Text & "')"
 
-        My.Computer.FileSystem.CopyFile(txt_picture.Text, "pictures\" & txt_id.Text & ".jpg")
 
         Dim mywriter As New OleDb.OleDbCommand(mysql, myconnection2)
         Try
+            My.Computer.FileSystem.CopyFile(txt_picture.Text, "pictures\" & txt_id.Text & ".jpg")
+
             mywriter.Connection.Open()
             mywriter.ExecuteNonQuery()
             mywriter.Connection.Close()
@@ -142,15 +145,20 @@
                             FLD_PRODUCT_SIZE='" & cmb_size.Text & "',
                             FLD_PRODUCT_COMPATIBILITY='" & txt_compatibility.Text & "'
                             WHERE FLD_PRODUCT_ID='" & txt_id.Text & "'")
-
-        Beep()
-        MsgBox("You have successfully updated the product """ & txt_id.Text & """.")
+        Try
+            File.Copy(txt_picture.Text, "pictures\" & txt_id.Text & ".jpg", True)
+        Catch ex As Exception
+            Beep()
+            MsgBox("Failed to upload picture" & vbCrLf & vbCrLf & ex.Message)
+        End Try
 
         refresh_grid()
         resetField()
+
     End Sub
 
     Private Sub btn_delete_Click(sender As Object, e As EventArgs) Handles btn_delete.Click
+        Dim picture = txt_id.Text & ".jpg"
         run_sql_command("DELETE FROM TBL_PRODUCTS_A189289 WHERE FLD_PRODUCT_ID='" & txt_id.Text & "'")
         Beep()
         MsgBox("The course """ & txt_id.Text & """ has been successfully deleted.")
