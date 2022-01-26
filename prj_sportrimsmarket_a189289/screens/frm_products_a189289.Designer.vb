@@ -61,6 +61,8 @@ Partial Class frm_products_a189289
         Me.ProductName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.Quantity = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.txt_productId = New System.Windows.Forms.TextBox()
+        Me.txt_orderId = New System.Windows.Forms.TextBox()
+        Me.txt_poId = New System.Windows.Forms.TextBox()
         CType(Me.grd_products, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.pic_product, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.MenuStrip1.SuspendLayout()
@@ -375,12 +377,30 @@ Partial Class frm_products_a189289
         Me.txt_productId.Size = New System.Drawing.Size(83, 20)
         Me.txt_productId.TabIndex = 41
         '
+        'txt_orderId
+        '
+        Me.txt_orderId.Location = New System.Drawing.Point(697, 191)
+        Me.txt_orderId.Name = "txt_orderId"
+        Me.txt_orderId.Size = New System.Drawing.Size(100, 20)
+        Me.txt_orderId.TabIndex = 42
+        Me.txt_orderId.Visible = False
+        '
+        'txt_poId
+        '
+        Me.txt_poId.Location = New System.Drawing.Point(803, 191)
+        Me.txt_poId.Name = "txt_poId"
+        Me.txt_poId.Size = New System.Drawing.Size(100, 20)
+        Me.txt_poId.TabIndex = 43
+        Me.txt_poId.Visible = False
+        '
         'frm_products_a189289
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.CornflowerBlue
         Me.ClientSize = New System.Drawing.Size(1304, 592)
+        Me.Controls.Add(Me.txt_poId)
+        Me.Controls.Add(Me.txt_orderId)
         Me.Controls.Add(Me.txt_productId)
         Me.Controls.Add(Me.lst_cart)
         Me.Controls.Add(Me.lbl_customer)
@@ -460,4 +480,6 @@ Partial Class frm_products_a189289
     Friend WithEvents ProductName As ColumnHeader
     Friend WithEvents Quantity As ColumnHeader
     Friend WithEvents txt_productId As TextBox
+    Friend WithEvents txt_orderId As TextBox
+    Friend WithEvents txt_poId As TextBox
 End Class

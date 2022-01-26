@@ -14,11 +14,12 @@
         grd_products.Columns(6).HeaderText = "Size"
 
         cmb_customer.DataSource = run_sql_query("SELECT * FROM TBL_CUSTOMERS_A189289")
-        cmb_customer.DisplayMember = "FLD_CUSTOMER_NAME"
         cmb_customer.ValueMember = "FLD_CUSTOMER_ID"
+        cmb_customer.DisplayMember = "FLD_CUSTOMER_NAME"
         cmb_staff.DataSource = run_sql_query("SELECT * FROM TBL_STAFFS_A189289")
-        cmb_staff.DisplayMember = "FLD_STAFF_NAME"
         cmb_staff.ValueMember = "FLD_STAFF_ID"
+        cmb_staff.DisplayMember = "FLD_STAFF_NAME"
+
 
         btn_cart.Enabled = False
 
@@ -112,5 +113,85 @@
         lst_cart.EndUpdate()
 
     End Sub
+
+    Private Sub btn_order_Click(sender As Object, e As EventArgs) Handles btn_order.Click
+
+        Dim mytransaction As OleDb.OleDbTransaction
+        If myconnection2.State = False Then
+            myconnection2.Open()
+        End If
+
+
+        If lst_cart.Items.Count = 0 Then
+            MessageBox.Show("Cart cannot be empty")
+            Return
+        End If
+
+        Try
+
+            mytransaction = myconnection2.BeginTransaction
+
+            Dim dateTime = Date.Now.ToString("dd/M/yyyy")
+            ' Insert Orders table (only once)
+
+
+            txt_orderId.Text = generate_Id("O", "TBL_ORDERS_A189289", "FLD_ORDER_ID")
+
+            Dim orderQuery = $"INSERT INTO TBL_ORDERS_A189289 VALUES 
+            ('" & txt_orderId.Text & "',
+            '" & cmb_staff.SelectedValue.ToString & "',
+            '" & dateTime & "',
+            '" & cmb_customer.SelectedValue.ToString & "')"
+            Dim mywriter As New OleDb.OleDbCommand(orderQuery, myconnection2, mytransaction)
+            mywriter.ExecuteNonQuery()
+            Dim productOrderId = generate_Id("X", "TBL_PRODUCTS_ORDERS_A189289", "FLD_PO_ID")
+
+            Dim increment = 0
+            For Each item As ListViewItem In lst_cart.Items
+                Dim IdInt = productOrderId.Substring(1)
+                IdInt += increment
+                If IdInt < 10 Then
+                    txt_poId.Text = String.Concat("X0", IdInt)
+                Else
+                    txt_poId.Text = String.Concat("X", IdInt)
+                End If
+                ' Insert products orders table (for each item)
+                ' Reference order id 
+                Dim productOrderQry As String = "INSERT INTO TBL_PRODUCTS_ORDERS_A189289 (FLD_PO_ID, FLD_ORDER_ID, FLD_PRODUCT_ID, FLD_QUANTITY ) VALUES 
+                ('" & txt_poId.Text & "',
+                '" & txt_orderId.Text & "',
+                '" & item.SubItems(0).Text & "',
+                " & item.SubItems(2).Text & ")"
+                Dim mywriter2 As New OleDb.OleDbCommand(productOrderQry, myconnection2, mytransaction)
+                mywriter2.ExecuteNonQuery()
+
+                increment += 1
+            Next
+
+            mytransaction.Commit()
+            myconnection2.Close()
+
+            MessageBox.Show("Order Success")
+
+        Catch ex As Exception
+            mytransaction.Rollback()
+            myconnection2.Close()
+            MessageBox.Show($"E: {ex.Message}")
+        End Try
+
+    End Sub
+
+    Private Function generate_Id(prefix, table, field) As String
+
+        Dim lastmatric As String = run_sql_query($"SELECT MAX({field}) AS LASTMATRIC FROM {table}").Rows(0).Item("LASTMATRIC")
+        Dim num = lastmatric.Substring(1)
+        num += 1
+        If num < 10 Then
+            prefix = String.Concat(prefix, 0)
+        End If
+        Dim newId = String.Concat(prefix, num)
+        Return newId
+
+    End Function
 
 End Class
