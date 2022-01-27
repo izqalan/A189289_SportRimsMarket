@@ -27,6 +27,11 @@ prj_sportrimsmarket_a189289
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
 </member>
+<member name="P:prj_sportrimsmarket_a189289.My.Resources.Resources.f1_yellow_wheel">
+<summary>
+  Looks up a localized resource of type System.Drawing.Icon similar to (Icon).
+</summary>
+</member>
 <member name="P:prj_sportrimsmarket_a189289.My.Resources.Resources.porsche">
 <summary>
   Looks up a localized resource of type System.Drawing.Bitmap.

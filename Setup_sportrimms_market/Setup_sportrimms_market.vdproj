@@ -292,13 +292,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7019232012EA6A59021108870B83A5FC"
+        "OwnerKey" = "8:_6B9AD62F76D244FA8D806261A2D74FDA"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6B9AD62F76D244FA8D806261A2D74FDA"
+        "OwnerKey" = "8:_7019232012EA6A59021108870B83A5FC"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -319,6 +319,22 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -335,6 +351,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -1343,7 +1367,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:a189289_SportRimsmarket"
         "ProductCode" = "8:{E80C8665-6E24-4B70-B84F-0AD9F940805E}"
-        "PackageCode" = "8:{6BBFDE35-32AB-49F8-8214-0299869A28A8}"
+        "PackageCode" = "8:{58A15027-F739-4CAB-BC5A-B662EB31839A}"
         "UpgradeCode" = "8:{DFF388AF-4BA4-4CF8-BB92-F55EC2DE3004}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -1351,7 +1375,7 @@
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
         "ProductVersion" = "8:1.0.0"
-        "Manufacturer" = "8:Default Company Name"
+        "Manufacturer" = "8:Izqalan Nor'Izad"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:"
         "Title" = "8:Setup_sportrimms_market"
