@@ -31,9 +31,9 @@ Partial Class frm_orders_a189289
         Me.lst_orders = New System.Windows.Forms.ListView()
         Me.oid = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.createdAt = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
+        Me.customerName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.customerId = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.lbl_your_order = New System.Windows.Forms.Label()
-        Me.customerName = CType(New System.Windows.Forms.ColumnHeader(), System.Windows.Forms.ColumnHeader)
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -84,6 +84,7 @@ Partial Class frm_orders_a189289
         Me.lst_orders.Location = New System.Drawing.Point(25, 91)
         Me.lst_orders.Name = "lst_orders"
         Me.lst_orders.Size = New System.Drawing.Size(741, 324)
+        Me.lst_orders.Sorting = System.Windows.Forms.SortOrder.Descending
         Me.lst_orders.TabIndex = 26
         Me.lst_orders.UseCompatibleStateImageBehavior = False
         Me.lst_orders.View = System.Windows.Forms.View.Details
@@ -96,7 +97,13 @@ Partial Class frm_orders_a189289
         'createdAt
         '
         Me.createdAt.Text = "Created At"
-        Me.createdAt.Width = 399
+        Me.createdAt.Width = 412
+        '
+        'customerName
+        '
+        Me.customerName.DisplayIndex = 3
+        Me.customerName.Text = "Customer Name"
+        Me.customerName.Width = 104
         '
         'customerId
         '
@@ -113,12 +120,6 @@ Partial Class frm_orders_a189289
         Me.lbl_your_order.Size = New System.Drawing.Size(156, 29)
         Me.lbl_your_order.TabIndex = 27
         Me.lbl_your_order.Text = "Your Orders"
-        '
-        'customerName
-        '
-        Me.customerName.DisplayIndex = 3
-        Me.customerName.Text = "Customer Name"
-        Me.customerName.Width = 104
         '
         'frm_orders_a189289
         '

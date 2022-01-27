@@ -22,7 +22,7 @@ Partial Class frm_products_a189289
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Dim DataGridViewCellStyle1 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
+        Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.grd_products = New System.Windows.Forms.DataGridView()
         Me.pic_product = New System.Windows.Forms.PictureBox()
         Me.lbl_itemName = New System.Windows.Forms.Label()
@@ -81,8 +81,8 @@ Partial Class frm_products_a189289
         Me.grd_products.MultiSelect = False
         Me.grd_products.Name = "grd_products"
         Me.grd_products.ReadOnly = True
-        DataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
-        Me.grd_products.RowsDefaultCellStyle = DataGridViewCellStyle1
+        DataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.[True]
+        Me.grd_products.RowsDefaultCellStyle = DataGridViewCellStyle2
         Me.grd_products.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.grd_products.Size = New System.Drawing.Size(1280, 339)
         Me.grd_products.TabIndex = 1
@@ -347,6 +347,7 @@ Partial Class frm_products_a189289
         'lst_cart
         '
         Me.lst_cart.Columns.AddRange(New System.Windows.Forms.ColumnHeader() {Me.ProductID, Me.ProductName, Me.Quantity})
+        Me.lst_cart.FullRowSelect = True
         Me.lst_cart.HideSelection = False
         Me.lst_cart.Location = New System.Drawing.Point(697, 78)
         Me.lst_cart.Name = "lst_cart"

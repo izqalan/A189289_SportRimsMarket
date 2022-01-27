@@ -25,6 +25,14 @@
 
     End Sub
 
+    Private Sub clear_field()
+        txt_amount.Text = 0
+        btn_cart.Enabled = False
+        For Each i As ListViewItem In lst_cart.Items
+            lst_cart.Items.Remove(i)
+        Next
+    End Sub
+
     Private Sub search(pid As String)
         Try
             Dim searchItem = run_sql_query("SELECT * FROM TBL_PRODUCTS_A189289 WHERE FLD_PRODUCT_ID like '%" & pid & "%'")
@@ -172,7 +180,7 @@
             myconnection2.Close()
 
             MessageBox.Show("Order Success")
-
+            clear_field()
         Catch ex As Exception
             mytransaction.Rollback()
             myconnection2.Close()
@@ -194,4 +202,12 @@
 
     End Function
 
+    Private Sub lst_cart_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lst_cart.SelectedIndexChanged
+        lst_cart.BeginUpdate()
+        For Each i As ListViewItem In lst_cart.SelectedItems
+            lst_cart.Items.Remove(i)
+        Next
+        lst_cart.Update()
+        lst_cart.EndUpdate()
+    End Sub
 End Class
