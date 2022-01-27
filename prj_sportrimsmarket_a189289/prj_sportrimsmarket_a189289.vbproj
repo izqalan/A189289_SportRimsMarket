@@ -85,6 +85,12 @@
     <Compile Include="screens\frm_customers_crud_a189289.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="screens\frm_order_summary_a189289.Designer.vb">
+      <DependentUpon>frm_order_summary_a189289.vb</DependentUpon>
+    </Compile>
+    <Compile Include="screens\frm_order_summary_a189289.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="screens\frm_products_crud_a189289.Designer.vb">
       <DependentUpon>frm_products_crud_a189289.vb</DependentUpon>
     </Compile>
@@ -158,6 +164,9 @@
     <EmbeddedResource Include="screens\frm_orders_a189289.resx">
       <DependentUpon>frm_orders_a189289.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="screens\frm_order_summary_a189289.resx">
+      <DependentUpon>frm_order_summary_a189289.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="screens\frm_products_a189289.resx">
       <DependentUpon>frm_products_a189289.vb</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +197,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\car_wheel.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\VroomX.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
