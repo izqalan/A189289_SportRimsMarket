@@ -34,5 +34,10 @@ Namespace My
         Protected Overrides Sub OnCreateMainForm()
             Me.MainForm = Global.prj_sportrimsmarket_a189289.frm_mainmenu_a189289
         End Sub
+        
+        <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
+        Protected Overrides Sub OnCreateSplashScreen()
+            Me.SplashScreen = Global.prj_sportrimsmarket_a189289.splashscreen
+        End Sub
     End Class
 End Namespace
